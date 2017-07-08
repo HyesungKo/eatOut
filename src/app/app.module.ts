@@ -11,6 +11,7 @@ import { ChatListPage } from '../pages/chat-list/chat-list';
 import { UserRecommendationPage } from '../pages/user-recommendation/user-recommendation';
 import { SignupPage } from '../pages/signup/signup';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
+import { LoginPage } from '../pages/login/login';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -27,7 +28,10 @@ import { ProfileProvider } from '../providers/profile/profile';
     FollowingPlanPage,
     EventListPage,
     ChatListPage,
-    UserRecommendationPage
+    UserRecommendationPage,
+    SignupPage,
+    ResetPasswordPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,10 @@ import { ProfileProvider } from '../providers/profile/profile';
     FollowingPlanPage,
     EventListPage,
     ChatListPage,
-    UserRecommendationPage
+    UserRecommendationPage,
+    SignupPage,
+    ResetPasswordPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
