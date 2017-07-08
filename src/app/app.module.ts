@@ -3,13 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ProfilePage } from '../pages/profile/profile';
 import { FollowingPlanPage } from '../pages/following-plan/following-plan';
 import { EventListPage } from '../pages/event-list/event-list';
 import { ChatListPage } from '../pages/chat-list/chat-list';
 import { UserRecommendationPage } from '../pages/user-recommendation/user-recommendation';
+import { SignupPage } from '../pages/signup/signup';
+import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,7 +22,6 @@ import { ProfileProvider } from '../providers/profile/profile';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     TabsPage,
     ProfilePage,
     FollowingPlanPage,
@@ -36,7 +36,6 @@ import { ProfileProvider } from '../providers/profile/profile';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
     TabsPage,
     ProfilePage,
     FollowingPlanPage,

@@ -5,12 +5,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import firebase from 'firebase';
 
 import { TabsPage } from '../pages/tabs/tabs';
+import { LoginPage } from '../pages/login/login';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = TabsPage;
+  rootPage:any;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -26,6 +27,16 @@ export class MyApp {
       projectId: "myproject-3680e",
       storageBucket: "myproject-3680e.appspot.com",
       messagingSenderId: "995057306635"
+    });
+
+    const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+      if (!user) {
+        this.rootPage = LoginPage;
+        unsubscribe();
+      } else {
+        this.rootPage = TabsPage;
+        unsubscribe();
+      }
     });
   }
 }
