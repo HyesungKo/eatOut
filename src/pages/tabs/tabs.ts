@@ -13,8 +13,8 @@ export class TabsPage {
 
   tab1Root = EventListPage;
   tab2Root = UserRecommendationPage;
-  tab3Root = ChatListPage;
-  tab4Root = FollowingPlanPage;
+  tab3Root = FollowingPlanPage;
+  tab4Root = ChatListPage;
   tab5Root = ProfilePage;
 
   constructor() {
