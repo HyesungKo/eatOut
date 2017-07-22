@@ -12,7 +12,7 @@ export class AuthProvider {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
     .then ( newUser => {
       firebase.database().ref('/userProfile').child(newUser.uid)
-      .set({ email: email});
+      .set({ email: email });
     });
   }
 
@@ -21,6 +21,7 @@ export class AuthProvider {
   }
 
   logoutUser(): firebase.Promise<void> {
+    firebase.database().ref('/userProfile').child(firebase.auth().currentUser.uid).off();
     return firebase.auth().signOut();
   }
 }
